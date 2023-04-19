@@ -1,8 +1,8 @@
 {
-  "name": "shopping-cart",
+  "name": "e-commerce",
   "version": "0.2.0",
   "private": true,
-  "homepage": "https://Gamgab.github.io/online-shop",
+  "homepage": "https://Gamgab.github.io/e-commerce",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
