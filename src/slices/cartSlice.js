@@ -17,11 +17,7 @@ export const checkOutCart = createAsyncThunk(
   // "cart" est l'objet que l'on reçoit à l'appui du bouton
   async (cart) => {
     try {
-      const response = await axios.post(
-        /*"http://localhost:5000/order"*/
-        `${url}/order`,
-        cart
-      );
+      const response = await axios.post(`${url}/order`, cart);
       return response.data;
     } catch (error) {
       console.log(error);

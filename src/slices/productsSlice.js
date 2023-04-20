@@ -10,15 +10,12 @@ const initialState = {
   deleteStatus: null,
 };
 
-// FETCH via l'API
+// FETCH  via l'API
 export const productsFetch = createAsyncThunk(
   "products/productsFetch",
   async () => {
     try {
-      const response = await axios.get(
-        /* API EN LOCAL "http://localhost:5000/products"*/
-        `${url}/products`
-      );
+      const response = await axios.get(`${url}/products`);
       return response.data;
     } catch (error) {
       console.log(error);
@@ -29,11 +26,10 @@ export const productsFetch = createAsyncThunk(
 // CREATE & SAVE via l'API
 export const productsCreate = createAsyncThunk(
   "products/productsCreate",
-  // "values" est l'objet que l'on reçoit du formulaire
+  // "values" est l'objet que l'on reçoit du formulaire de création de produits
   async (values) => {
     try {
       const response = await axios.post(
-        /*"http://localhost:5000/products"*/
         `${url}/products`,
         values,
         /*ajout d'un header d'autentification avec le token*/
@@ -50,12 +46,11 @@ export const productsCreate = createAsyncThunk(
 // DELETE via l'API
 export const productDelete = createAsyncThunk(
   "products/productDelete",
-  // "id" est l'objet que l'on reçoit du formulaire
+  // "id" est l'objet que l'on reçoit du formulaire de suppression
   async (id) => {
     try {
       console.log(`${url}/products/${id}`);
       const response = await axios.delete(
-        /*`http://localhost:5000/api/products/${id}`,*/
         `${url}/products/${id}`,
         /*ajout d'un header d'autentification avec le token*/
         setHeaders()
