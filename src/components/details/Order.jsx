@@ -92,8 +92,8 @@ const OrderContainer = styled.div`
   max-width: 500px;
   width: 100%;
   height: auto;
-  box-shadow; rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-raduis: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
   padding: 2rem;
 `;
 
@@ -106,12 +106,12 @@ const Items = styled.div`
   }
 `;
 
-const Item = styled.div`
+const Item = styled.li`
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
 `;
 
-const Pending = styled.div`
+const Pending = styled.span`
   color: rgb(253, 181, 40);
   background: rgb(253, 181, 40, 0.12);
   padding: 3px 5px;
@@ -119,7 +119,7 @@ const Pending = styled.div`
   font-size: 14px;
 `;
 
-const Dispatched = styled.div`
+const Dispatched = styled.span`
   color: rgb(38, 198, 249);
   background: rgb(38, 198, 249, 0.12);
   padding: 3px 5px;
@@ -127,7 +127,7 @@ const Dispatched = styled.div`
   font-size: 14px;
 `;
 
-const Delivered = styled.div`
+const Delivered = styled.span`
   color: rgb(102, 108, 255);
   background: rgb(102, 108, 255, 0.12);
   padding: 3px 5px;
