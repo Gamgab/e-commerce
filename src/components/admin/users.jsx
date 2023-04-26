@@ -1,5 +1,5 @@
 const Users = () => {
-  return <h2>Users</h2>;
+  return <h2>Utilisateurs</h2>;
 };
 
 export default Users;

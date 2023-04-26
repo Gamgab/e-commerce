@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { setHeaders, url } from "../../slices/api";
+import Loader from "../loader";
 
 const Order = () => {
   const params = useParams();
@@ -30,7 +31,7 @@ const Order = () => {
   return (
     <StyleOrder>
       {loading ? (
-        <p>Chargement ...</p>
+        <Loader />
       ) : (
         <>
           <OrderContainer>

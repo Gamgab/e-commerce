@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 //import { useNavigate } from "react-router";
 import { addToCart, getTotals } from "../slices/cartSlice";
+import Loader from "./loader";
 //import { useGetAllProductsQuery } from "../slices/productsApi";
 
 const Home = () => {
@@ -44,7 +45,7 @@ const Home = () => {
           </div>
         </>
       ) : status === "pending" ? (
-        <p>Chargement ...</p>
+        <Loader />
       ) : (
         <p>Une erreur est survenue...</p>
       )}

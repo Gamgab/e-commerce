@@ -16,14 +16,6 @@ const Dashboard = () => {
           className={({ isActive }) =>
             isActive ? "link-active" : "link-inactive"
           }
-          to="/admin/summary"
-        >
-          <FaTachometerAlt /> Résumé
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "link-active" : "link-inactive"
-          }
           to="/admin/products"
         >
           <FaStore /> Produits
@@ -53,6 +45,17 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+/*
+       <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "link-inactive"
+          }
+          to="/admin/summary"
+        >
+          <FaTachometerAlt /> Résumé
+        </NavLink>
+*/
 
 const StyledDashboard = styled.div`
   display: flex;
