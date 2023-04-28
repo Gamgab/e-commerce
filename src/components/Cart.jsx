@@ -84,7 +84,7 @@ const Cart = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="cart-product-price">${cartItem.price}</div>
+                  <div className="cart-product-price">€{cartItem.price}</div>
                   <div className="cart-product-quantity">
                     <button onClick={() => handleDecreaseCart(cartItem)}>
                       -
@@ -93,7 +93,7 @@ const Cart = () => {
                     <button onClick={() => handleAddToCart(cartItem)}>+</button>
                   </div>
                   <div className="cart-product-total-price">
-                    ${cartItem.price * cartItem.cartQuantity}
+                    €{cartItem.price * cartItem.cartQuantity}
                   </div>
                 </div>
               ))}
@@ -105,9 +105,9 @@ const Cart = () => {
             <div className="cart-checkout">
               <div className="subtotal">
                 <span>Sous-total</span>
-                <span className="amount">${cart.cartTotalAmount}</span>
+                <span className="amount">€{cart.cartTotalAmount}</span>
               </div>
-              <p>Frais de port calculé au paiement</p>
+              <p>Le paiement est factice et rien ne sera réellement commandé</p>
               {auth._id ? (
                 <PayButton
                   cartItems={cart.cartItems}

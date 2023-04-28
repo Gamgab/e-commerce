@@ -26,7 +26,7 @@ const Home = () => {
     <div className="home-container">
       {status === "success" ? (
         <>
-          <h2>Ajouts récent</h2>
+          <h2>Nos produits</h2>
           <div className="products">
             {data &&
               data?.map((product) => (
@@ -35,10 +35,10 @@ const Home = () => {
                   <img src={product.image} alt={product.name} />
                   <div className="details">
                     <span>{product.desc}</span>
-                    <span className="price">${product.price}</span>
+                    <span className="price">€{product.price}</span>
                   </div>
                   <button onClick={() => handleAddToCart(product)}>
-                    Add To Cart
+                    Ajouter au panier
                   </button>
                 </div>
               ))}
